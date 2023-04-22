@@ -1,0 +1,218 @@
+
+*{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+    
+    }
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+
+
+#container{
+    display: flex;
+    height: calc(100%-0px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.left{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-image: url(car.jpg);
+background-size: cover;
+background-position: center;
+height: calc(100%- 0px);
+width: 40%;
+}
+
+.right{
+
+    height: 100%;
+            width: 60%;
+            background-color: rgb(248, 248, 248);
+        
+}
+.img-sec{
+
+    display: flex;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* semi-transparent black */
+			
+}
+
+.welcome{
+    color: whitesmoke;
+    font-family: 'Lobster Two', cursive;
+    font-size: 40px;
+}
+
+.sign-space{
+
+background-color: white;
+position: relative;
+
+
+}
+.sign-space::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.credentials input[type="text"],
+.credentials input[type="email"],
+.credentials input[type="tel"],
+.credentials input[type="password"]
+ {
+
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 14px 10px 10px;
+    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
+}
+:focus {
+    outline: 0;
+}
+
+
+
+.credentials{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 760px;
+    margin: 30px auto;
+
+}
+
+
+.input-wrapper {
+    width: calc(50% - 10px);
+    margin-bottom: 30px;
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .input-text {
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 14px;
+    color: red;
+    animation: errorFadeIn 0.5s forwards;
+  }
+
+  @keyframes errorFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  input:invalid + .input-text{
+
+    display: block;
+    animation: errorFadeIn 0.5s forwards;
+  }
+ 
+
+a{
+
+    text-decoration: none;
+    color: black;
+}
+
+.bottom{
+margin-left: 20px;
+
+}
+input[type="submit"] {
+    background-color: rgb(3, 104, 3);
+    border: 1px solid #66ad15;
+    color: #fff;
+    padding: 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+}
+.do-this{
+
+display: flex;
+justify-content: center;
+      
+    }
+
+    .error{
+        opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 14px;
+    color: red;
+
+    }
+    .error-2{
+        opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 14px;
+        color: red;
+    }
+    .error.show {
+        opacity: 1;
+      }
+      .error-2.show{
+            opacity: 1;
+      }
+    .credentials input:invalid {
+
+        border: 1px solid #b92326;
+        background-color: rgba(185, 35, 38, 0.25);
+    
+
+    }
+    .credentials input:focus:invalid {
+
+        background-color: transparent;
+        border: 1px solid #b92326;
+    
+    }
+
+    .credentials input:valid{
+
+        border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+    }
+
+
+    .credentials  .input:focus:invalid{
+
+        border: 1px solid #8BC34A;
+    background-color: transparent;
+    }
+
+
